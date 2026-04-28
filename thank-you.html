@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Meta Pixel Code -->
+<!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -13,6 +13,7 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1278320333953251');
 fbq('track', 'PageView');
+fbq('track', 'Lead', {content_name: 'Swipe File Download'});
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1278320333953251&ev=PageView&noscript=1"
@@ -126,13 +127,5 @@ footer a:hover{color:var(--accent);}
 </footer>
 <!-- Calendly embed -->
 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<!-- Optional: Meta Pixel "Lead" backup fire on thank-you page view.
-     Only uncomment if your form's submit handler isn't already firing it.
-<script>
-  if (typeof fbq !== 'undefined') {
-    fbq('track', 'Lead', {content_name: 'Swipe File Download'});
-  }
-</script>
--->
 </body>
 </html>
