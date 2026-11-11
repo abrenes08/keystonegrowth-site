@@ -31,7 +31,7 @@ Montserrat is self-hosted, with its OFL license in `assets/fonts/OFL.txt`. Core 
 
 The contact form uses `https://formspree.io/f/xlgaobby`, found in the existing draft homepage. JavaScript provides pending, accepted and failed states; success appears only after an accepted HTTP response. Failed submissions offer email/copy alternatives, and the form works as an ordinary HTML POST without JavaScript. Formspree must be active and configured to deliver to Aaron; no live test message has been sent by this implementation. A real submission and inbox check are still required before launch.
 
-Booking uses the pre-existing `https://calendly.com/keystonegrowth-booking/30min` link. Confirm current availability before launch. No new analytics/pixels were invented; existing tracking on legacy campaign pages is retained.
+Main website calls to action temporarily link to the inquiry form while the founder confirms availability for a Google Calendar appointment schedule. Replace CAL and bilingual call labels in tools/build_pages.py when the verified booking link is ready. Legacy campaign pages retain their earlier scheduling setup. No new analytics/pixels were invented; existing tracking on legacy campaign pages is retained.
 
 ## Before production
 
