@@ -14,7 +14,7 @@ async function scenario({lang='en',ok=true,valid=true,disabled=false}={}) {
 }
 let r=await scenario();assert.equal(r.requests,1);assert.equal(r.reset,true);assert.match(r.status,/was received/);assert.equal(r.fallback,true);assert.equal(r.disabled,false);
 r=await scenario({lang:'es'});assert.match(r.status,/fue recibida/);
-r=await scenario({ok:false});assert.equal(r.reset,false);assert.equal(r.fallback,false);assert.match(r.status,/could not confirm/);assert.match(r.href,/mailto:aaron@keystonegrowth.org/);assert.equal(r.disabled,false);
+r=await scenario({ok:false});assert.equal(r.reset,false);assert.equal(r.fallback,false);assert.match(r.status,/could not confirm/);assert.match(r.href,/mailto:aaronbrenes918@gmail.com/);assert.equal(r.disabled,false);
 r=await scenario({valid:false});assert.equal(r.requests,0);
 r=await scenario({disabled:true});assert.equal(r.requests,0);
 console.log('PASS form success (EN/ES), failure fallback, validation and duplicate-submit guard; no external requests made.');

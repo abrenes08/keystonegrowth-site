@@ -28,7 +28,7 @@
     const keys = ['name', 'email', 'business', 'service', 'budget', 'goal'];
     prepared = (es ? 'Hola Aaron,\n\nMe gustaría conversar sobre mi negocio.\n\n' : 'Hi Aaron,\n\nI would like to discuss my business.\n\n') + keys.map((key, i) => `${labels[i]}: ${d.get(key) || (es ? 'Por definir' : 'To discuss')}`).join('\n');
     const subject = es ? 'Consulta sobre servicios de Keystone Growth' : 'Keystone Growth service inquiry';
-    const href = `mailto:aaron@keystonegrowth.org?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(prepared)}`;
+    const href = `mailto:aaronbrenes918@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(prepared)}`;
     openEmail.href = href;
     const submit = form.querySelector('[type=submit]');
     if (submit.disabled) return;
@@ -51,7 +51,7 @@
     }
   });
   copy.addEventListener('click', async () => {
-    try { await navigator.clipboard.writeText(prepared); status.textContent = es ? 'Texto copiado. Pegalo en un correo a aaron@keystonegrowth.org.' : 'Text copied. Paste it into an email to aaron@keystonegrowth.org.'; }
+    try { await navigator.clipboard.writeText(prepared); status.textContent = es ? 'Texto copiado. Pegalo en un correo a aaronbrenes918@gmail.com.' : 'Text copied. Paste it into an email to aaronbrenes918@gmail.com.'; }
     catch { const area = document.querySelector('#inquiry-text'); area.value = prepared; area.hidden = false; area.focus(); area.select(); status.textContent = es ? 'Seleccioná y copiá el texto de abajo.' : 'Select and copy the text below.'; }
   });
 })();

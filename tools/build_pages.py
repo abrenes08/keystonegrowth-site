@@ -5,10 +5,289 @@ import json
 ROOT=Path(__file__).resolve().parents[1]
 MARK='<svg viewBox="0 0 100 100" aria-hidden="true" focusable="false"><path fill="currentColor" fill-rule="evenodd" d="M0 0H100L78 100H22ZM43 30H57L54 73H46Z"/></svg>'
 ICONS=[ '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 17l5-5 4 3 7-9M14 6h6v6"/></svg>', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M7 6.5h1m2 0h1M7 13h10M7 16h6"/></svg>', '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 8h15m-4-4 4 4-4 4M20 16H5m4-4-4 4 4 4"/></svg>' ]
-DATA={
-'en':dict(title='Keystone Growth | Paid Ads, Websites & CRM Automation',description='Work directly with Aaron Brenes on paid advertising, conversion-focused websites and CRM automation. Serving businesses across the US and Latin America.',skip='Skip to content',nav=['Services','Your partner','How it works','Contact'],menu='Menu',call='Book a discovery call',hero_label='Founder-led marketing · US & Latin America',hero='Your marketing.<br/>Connected.<br/><em>Moving forward.</em>',hero_p='Paid ads, websites, and follow-up that work together. One clear strategy, with the person doing the thinking just a conversation away.',explore='Explore the services',hero_note='Work directly with Aaron. In English or Spanish.',system_label='A clear path from interest to inquiry',flow=[('Attract the right attention','Google & Meta Ads built around your offer.'),('Give it somewhere to go','A clear page. A focused next step.'),('Keep the conversation going','Organized leads and automated follow-up.')],system_foot='One connected approach. Led by Aaron.',facts=[('3+ years','Managing digital ad campaigns'),('Direct founder access','Strategy through execution'),('English + Español','Across borders. In your language.')],services_label='What we can build together',services_title='Less disconnected.<br/>More intentional.',services_p='A great campaign needs somewhere to send people. A good website needs the right traffic. And every inquiry needs a next step. Let’s connect the pieces.',services=[('Paid advertising','Get in front of the right people.','Reach potential customers through Google and Meta with a clear offer, focused campaigns, and ongoing optimization. Understand what is working and where to improve.',['Google Ads','Meta Ads','Campaign reporting'],'Let’s talk ads','Paid advertising'),('Websites & landing pages','Make the next step obvious.','Turn visits into conversations with a fast, focused website or campaign landing page. Clear messaging, mobile-friendly design, and a straightforward path to inquire.',['Websites','Landing pages','Lead capture'],'Let’s talk websites','Websites & landing pages'),('CRM & automation','Give every inquiry a place to go.','Keep leads organized and automate the routine follow-up: acknowledgments, routing, reminders, and nurture. Your team stays focused on the conversations that need a person.',['Lead pipelines','Automated follow-up','Booking workflows'],'Let’s talk automation','CRM & automation')],founder_label='The person behind Keystone',founder_title='Your business.<br/>My direct attention.',founder_p=['I’m Aaron, founder of Keystone Growth. I help businesses connect their advertising, websites, and follow-up so their marketing has a clearer direction.','With more than three years managing campaigns, I bring hands-on experience to the work. You speak directly with me about strategy, priorities, and progress.','Based in Costa Rica, working remotely with businesses across the US and Latin America. Same commitment, whichever language we’re speaking.'],founder_caption='Founder · Keystone Growth',founder_facts=[('3+ years','Of campaign management experience'),('One contact','Direct communication with Aaron')],founder_link='Let’s discuss your business',process_label='How working together works',process_title='A clear start.<br/>A practical next step.',process=[('Understand the business','We talk about your offer, customers, current marketing, and what you want to improve. We decide whether there is a useful fit.'),('Build the right scope','You get a clear proposal: priorities, deliverables, timeline, fees, and responsibilities. We focus on the pieces your business needs.'),('Launch, learn, improve','We put the plan into action, review progress, and make informed adjustments. You know what is happening and who to speak to.')],market_label='One brand. Two languages.',market_title='Built to work across borders.',market_p='Support for businesses in the United States and Latin America, with messaging and conversion paths adapted to the audience.',scope_title='A scope that fits your business.',scope_p='Projects and monthly management are quoted around your goals and complexity. Advertising spend and third-party platform costs are separate.',scope_link='Discuss your scope',faq_label='A few things worth knowing',faq_title='Clear from<br/>the beginning.',faq_intro='A direct relationship starts with clear expectations.',faqs=[('Who is a good fit for Keystone?','Businesses with a clear offer, capacity for more customers, and someone ready to respond to inquiries. We start by understanding your sales process and deciding whether the scope makes sense.'),('Do I have to buy all three services?','No. We can work on advertising, a website or landing page, or CRM automation individually. When connecting them solves a real problem, we build a combined scope.'),('Will I work directly with Aaron?','Yes. Aaron leads strategy, communication, and quality review. Automation and specialist delivery partners may support execution, while Aaron remains your point of contact.'),('Do you personally call or close my leads?','Human lead handling and sales are not included in the standard scope. Automation can support acknowledgment, reminders, and nurture; your team handles live conversations and closing unless separately agreed.'),('How much does it cost?','We quote based on the deliverables, channels, integrations, and ongoing support your business needs. Management and project fees are separate from advertising spend, software, and messaging costs.'),('Can we work in Spanish?','Absolutely. Keystone works in English and Spanish. Choose the language you prefer, and we can adapt the website, campaigns, and follow-up to your audience.')],contact_label='Let’s find the next step',contact_title='Tell me where<br/>you want to go.',contact_p='Bring your business, your goals, and what isn’t working. We’ll talk through where advertising, a better website, or follow-up could help.',email_label='Prefer email?',form_title='Start with a little context.',form_note='Tell me what you’re working on. I’ll reply by email.',labels=['Your name','Business or website','What do you need?','Monthly ad budget','What would you like to improve?'],placeholders=['Your name','Business name or website','Tell me a little about your goals.'],services_options=['Paid advertising','Websites & landing pages','CRM & automation','A connected marketing plan','Help choosing'],choose='Select an option',budgets=['Not running ads yet','Under $1,000','$1,000–$3,000','$3,000–$5,000','$5,000+','Let’s discuss'],prepare='Send my inquiry',privacy='Your details are sent through Formspree so Aaron can respond to your inquiry.',privacy_link='Privacy policy',fallback='Your inquiry is ready. Nothing has been sent yet.',open_email='Open email app',copy='Copy inquiry',nojs='Your inquiry will be submitted on Formspree. You can also email Aaron directly.',footer_line='Paid ads, websites, and follow-up. Connected through direct collaboration.',copyright='© 2026 Keystone Growth. All rights reserved.',terms='Terms',legal_note='Policies in English',photo_alt='Aaron Brenes, founder of Keystone Growth'),
-'es':dict(title='Keystone Growth | Publicidad, sitios web y automatización CRM',description='Trabajá directamente con Aaron Brenes en publicidad digital, sitios web y automatización CRM. Para negocios en Latinoamérica y Estados Unidos.',skip='Saltar al contenido',nav=['Servicios','Tu aliado','Cómo trabajamos','Contacto'],menu='Menú',call='Agendá una llamada',hero_label='Marketing con atención directa · EE. UU. y Latinoamérica',hero='Tu marketing.<br/>Conectado.<br/><em>En movimiento.</em>',hero_p='Publicidad, sitios web y seguimiento que trabajan juntos. Una estrategia clara y comunicación directa con la persona que la dirige.',explore='Explorá los servicios',hero_note='Trabajá directamente con Aaron. En español o inglés.',system_label='Del primer clic a una nueva consulta',flow=[('Atraé a las personas correctas','Google y Meta Ads con una oferta clara.'),('Dales un siguiente paso','Una página enfocada en generar consultas.'),('Mantené la conversación','Contactos organizados y seguimiento automático.')],system_foot='Un enfoque conectado. Dirigido por Aaron.',facts=[('Más de 3 años','Gestionando campañas digitales'),('Contacto directo','De la estrategia a la ejecución'),('Español + English','Sin fronteras. En tu idioma.')],services_label='Lo que podemos construir juntos',services_title='Menos piezas sueltas.<br/>Más dirección.',services_p='Una buena campaña necesita una página que la acompañe. Una buena web necesita visitas relevantes. Y cada consulta necesita un siguiente paso. Conectemos las piezas.',services=[('Publicidad digital','Llegá a las personas correctas.','Conectá con posibles clientes en Google y Meta mediante una oferta clara, campañas enfocadas y optimización continua. Entendé qué funciona y dónde mejorar.',['Google Ads','Meta Ads','Reportes de campañas'],'Hablemos de publicidad','Publicidad digital'),('Sitios web y landing pages','Hacé claro el siguiente paso.','Convertí visitas en conversaciones con un sitio web o una landing page rápida y enfocada. Mensajes claros, diseño para celulares y un camino sencillo para contactarte.',['Sitios web','Landing pages','Captación de contactos'],'Hablemos de tu web','Sitios web y landing pages'),('CRM y automatización','Dale seguimiento a cada consulta.','Organizá contactos y automatizá el seguimiento habitual: confirmaciones, asignaciones, recordatorios y secuencias. Tu equipo se enfoca en las conversaciones que necesitan atención personal.',['Pipelines de ventas','Seguimiento automático','Flujos de reservas'],'Hablemos de automatización','CRM y automatización')],founder_label='La persona detrás de Keystone',founder_title='Tu negocio.<br/>Mi atención directa.',founder_p=['Soy Aaron, fundador de Keystone Growth. Ayudo a negocios a conectar su publicidad, su sitio web y el seguimiento de consultas para darle una dirección más clara a su marketing.','Tengo más de tres años de experiencia gestionando campañas. Hablás directamente conmigo sobre la estrategia, las prioridades y el progreso de tu proyecto.','Desde Costa Rica, trabajo de forma remota con negocios en Latinoamérica y Estados Unidos. El mismo compromiso, en el idioma que prefirás.'],founder_caption='Fundador · Keystone Growth',founder_facts=[('Más de 3 años','De experiencia gestionando campañas'),('Un contacto','Comunicación directa con Aaron')],founder_link='Conversemos sobre tu negocio',process_label='Así trabajamos juntos',process_title='Un inicio claro.<br/>Un siguiente paso concreto.',process=[('Entendemos tu negocio','Conversamos sobre tu oferta, tus clientes, tu marketing actual y lo que querés mejorar. Definimos si podemos aportar valor.'),('Definimos el alcance','Recibís una propuesta clara: prioridades, entregables, plazos, tarifas y responsabilidades. Nos enfocamos en lo que tu negocio necesita.'),('Lanzamos y mejoramos','Ponemos el plan en marcha, revisamos el progreso y hacemos ajustes informados. Sabés qué está pasando y con quién hablar.')],market_label='Una marca. Dos idiomas.',market_title='Para trabajar sin fronteras.',market_p='Apoyo para negocios en Latinoamérica y Estados Unidos, con mensajes y rutas de contacto adaptados a cada audiencia.',scope_title='Un alcance que encaje con vos.',scope_p='Los proyectos y la gestión mensual se cotizan según tus objetivos y la complejidad. La inversión publicitaria y las plataformas se pagan por separado.',scope_link='Conversemos sobre el alcance',faq_label='Antes de empezar',faq_title='Claro desde<br/>el principio.',faq_intro='Una relación directa empieza con expectativas claras.',faqs=[('¿Para qué negocios es Keystone?','Para negocios con una oferta clara, capacidad de atender más clientes y alguien que responda las consultas. Primero entendemos tu proceso de ventas y definimos si el alcance tiene sentido.'),('¿Tengo que contratar los tres servicios?','No. Podemos trabajar publicidad, sitio web o landing page, o automatización CRM por separado. Si conectarlos resuelve un problema real, definimos un alcance conjunto.'),('¿Voy a trabajar directamente con Aaron?','Sí. Aaron dirige la estrategia, la comunicación y la revisión de calidad. La automatización y especialistas pueden apoyar la ejecución; Aaron sigue siendo tu contacto directo.'),('¿Ustedes llaman o cierran mis ventas?','La atención personal de contactos y el cierre de ventas no forman parte del alcance estándar. La automatización puede apoyar confirmaciones, recordatorios y seguimiento; tu equipo atiende las conversaciones y cierra las ventas, salvo acuerdo separado.'),('¿Cuánto cuesta?','Cotizamos según los entregables, los canales, las integraciones y el soporte que necesitás. Los honorarios se pagan por separado de la publicidad, el software y los mensajes.'),('¿También podemos trabajar en inglés?','Claro. Trabajamos en español e inglés. Elegí el idioma que prefirás y adaptamos la web, las campañas y el seguimiento a tu audiencia.')],contact_label='Encontremos el siguiente paso',contact_title='Contame hacia<br/>dónde querés ir.',contact_p='Hablemos de tu negocio, tus objetivos y lo que no está funcionando. Revisemos dónde puede ayudar la publicidad, una mejor web o el seguimiento.',email_label='¿Preferís escribir?',form_title='Empecemos con un poco de contexto.',form_note='Contame en qué estás trabajando. Te respondo por correo.',labels=['Tu nombre','Negocio o sitio web','¿Qué necesitás?','Presupuesto mensual de publicidad','¿Qué te gustaría mejorar?'],placeholders=['Tu nombre','Nombre del negocio o sitio web','Contame un poco sobre tus objetivos.'],services_options=['Publicidad digital','Sitios web y landing pages','CRM y automatización','Un plan de marketing conectado','Ayuda para elegir'],choose='Seleccioná una opción',budgets=['Aún no invierto en publicidad','Menos de US$1.000','US$1.000–US$3.000','US$3.000–US$5.000','Más de US$5.000','Por definir'],prepare='Enviar mi consulta',privacy='Tus datos se envían mediante Formspree para que Aaron pueda responder tu consulta.',privacy_link='Política de privacidad',fallback='Tu consulta está lista. Todavía no se ha enviado nada.',open_email='Abrir aplicación de correo',copy='Copiar consulta',nojs='Tu consulta se enviará mediante Formspree. También podés escribirle directamente a Aaron.',footer_line='Publicidad, sitios web y seguimiento. Conectados con atención directa.',copyright='© 2026 Keystone Growth. Todos los derechos reservados.',terms='Términos',legal_note='Políticas en inglés',photo_alt='Aaron Brenes, fundador de Keystone Growth')
-}
+DATA = {'en': {'title': 'Keystone Growth | Paid Ads, Websites & CRM Automation',
+        'description': 'Work directly with Aaron Brenes on paid advertising, conversion-focused websites and '
+                       'CRM automation. Serving businesses across the US and Latin America.',
+        'skip': 'Skip to content',
+        'nav': ['Services', 'Your partner', 'How it works', 'Contact'],
+        'menu': 'Menu',
+        'call': 'Book a discovery call',
+        'hero_label': 'Hands-on marketing for US service businesses',
+        'hero': 'More inquiries.<br/>Better follow-up.<br/><em>One direct partner.</em>',
+        'hero_p': 'Google and Meta ads, websites built to capture inquiries, and automated follow-up. Work '
+                  'directly with Aaron to turn more of your marketing into sales conversations.',
+        'explore': 'Explore the services',
+        'hero_note': 'Work directly with Aaron. In English or Spanish.',
+        'system_label': 'A clear path from interest to inquiry',
+        'flow': [('Attract the right attention', 'Google & Meta Ads built around your offer.'),
+                 ('Give it somewhere to go', 'A clear page. A focused next step.'),
+                 ('Keep the conversation going', 'Organized leads and automated follow-up.')],
+        'system_foot': 'One connected approach. Led by Aaron.',
+        'facts': [('3+ years', 'Managing digital ad campaigns'),
+                  ('Direct founder access', 'Strategy through execution'),
+                  ('English + Español', 'Across borders. In your language.')],
+        'services_label': 'What we can build together',
+        'services_title': 'Get found.<br/>Make it easy to act.',
+        'services_p': 'Reach people looking for your services, give them a clear reason to contact you, and '
+                      'help your team follow up before the opportunity goes cold.',
+        'services': [('Paid advertising',
+                      'Reach people ready to explore your offer.',
+                      'Build focused Google and Meta campaigns around your services and market. Review '
+                      'inquiries and campaign performance to decide where to invest next.',
+                      ['Google Ads', 'Meta Ads', 'Campaign reporting'],
+                      'Let’s talk ads',
+                      'Paid advertising'),
+                     ('Websites & landing pages',
+                      'Turn visits into inquiries and bookings.',
+                      'Give prospects a clear offer, a fast mobile experience, and one obvious next step: '
+                      'request a quote, send an inquiry, or book a call.',
+                      ['Websites', 'Landing pages', 'Lead capture'],
+                      'Let’s talk websites',
+                      'Websites & landing pages'),
+                     ('CRM & automation',
+                      'Follow up while the interest is fresh.',
+                      'Connect your forms, lead pipeline, and booking process. Automate acknowledgments, '
+                      'reminders, and follow-up so your team can focus on sales conversations.',
+                      ['Lead pipelines', 'Automated follow-up', 'Booking workflows'],
+                      'Let’s talk automation',
+                      'CRM & automation')],
+        'founder_label': 'The person behind Keystone',
+        'founder_title': 'Your business.<br/>My direct attention.',
+        'founder_p': ['I’m Aaron, founder of Keystone Growth. I help businesses connect their advertising, '
+                      'websites, and follow-up so their marketing has a clearer direction.',
+                      'With more than three years managing campaigns, I bring hands-on experience to the '
+                      'work. You speak directly with me about strategy, priorities, and progress.',
+                      'Based in Costa Rica, working remotely with businesses across the US and Latin '
+                      'America. Same commitment, whichever language we’re speaking.'],
+        'founder_caption': 'Founder · Keystone Growth',
+        'founder_facts': [('3+ years', 'Of campaign management experience'),
+                          ('One contact', 'Direct communication with Aaron')],
+        'founder_link': 'Let’s discuss your business',
+        'process_label': 'How working together works',
+        'process_title': 'A clear start.<br/>A practical next step.',
+        'process': [('Understand the business',
+                     'We talk about your offer, customers, current marketing, and what you want to improve. '
+                     'We decide whether there is a useful fit.'),
+                    ('Build the right scope',
+                     'You get a clear proposal: priorities, deliverables, timeline, fees, and '
+                     'responsibilities. We focus on the pieces your business needs.'),
+                    ('Launch, learn, improve',
+                     'We put the plan into action, review progress, and make informed adjustments. You know '
+                     'what is happening and who to speak to.')],
+        'market_label': 'US market focus · English & Spanish',
+        'market_title': 'Built around how your customers buy.',
+        'market_p': 'For service businesses selling in the US: clear offers, focused inquiry or booking '
+                    'pages, and follow-up that fits your sales process. Serve Spanish-speaking customers '
+                    'too? We can adapt the journey for them.',
+        'scope_title': 'A scope that fits your business.',
+        'scope_p': 'Projects and monthly management are quoted around your goals and complexity. Advertising '
+                   'spend and third-party platform costs are separate.',
+        'scope_link': 'Discuss your scope',
+        'faq_label': 'A few things worth knowing',
+        'faq_title': 'Clear from<br/>the beginning.',
+        'faq_intro': 'A direct relationship starts with clear expectations.',
+        'faqs': [('Who is a good fit for Keystone?',
+                  'Businesses with a clear offer, capacity for more customers, and someone ready to respond '
+                  'to inquiries. We start by understanding your sales process and deciding whether the scope '
+                  'makes sense.'),
+                 ('Do I have to buy all three services?',
+                  'No. We can work on advertising, a website or landing page, or CRM automation '
+                  'individually. When connecting them solves a real problem, we build a combined scope.'),
+                 ('Will I work directly with Aaron?',
+                  'Yes. Aaron leads strategy, communication, and quality review. Automation and specialist '
+                  'delivery partners may support execution, while Aaron remains your point of contact.'),
+                 ('Do you personally call or close my leads?',
+                  'Human lead handling and sales are not included in the standard scope. Automation can '
+                  'support acknowledgment, reminders, and nurture; your team handles live conversations and '
+                  'closing unless separately agreed.'),
+                 ('How much does it cost?',
+                  'We quote based on the deliverables, channels, integrations, and ongoing support your '
+                  'business needs. Management and project fees are separate from advertising spend, '
+                  'software, and messaging costs.'),
+                 ('Can we work in Spanish?',
+                  'Absolutely. Keystone works in English and Spanish. Choose the language you prefer, and we '
+                  'can adapt the website, campaigns, and follow-up to your audience.')],
+        'contact_label': 'Let’s find the next step',
+        'contact_title': 'Where are you<br/>losing inquiries?',
+        'contact_p': 'Not enough leads? A website that doesn’t convert? Prospects going quiet? Tell me '
+                     'what’s happening, and we’ll identify a useful next step.',
+        'email_label': 'Prefer email?',
+        'form_title': 'Tell me what needs to work better.',
+        'form_note': 'Tell me what you’re working on. I’ll reply by email.',
+        'labels': ['Your name',
+                   'Business or website',
+                   'What do you need?',
+                   'Monthly ad budget',
+                   'What would you like to improve?'],
+        'placeholders': ['Your name', 'Business name or website', 'Tell me a little about your goals.'],
+        'services_options': ['Paid advertising',
+                             'Websites & landing pages',
+                             'CRM & automation',
+                             'A connected marketing plan',
+                             'Help choosing'],
+        'choose': 'Select an option',
+        'budgets': ['Not running ads yet',
+                    'Under $1,000',
+                    '$1,000–$3,000',
+                    '$3,000–$5,000',
+                    '$5,000+',
+                    'Let’s discuss'],
+        'prepare': 'Send my inquiry',
+        'privacy': 'Your details are sent through Formspree so Aaron can respond to your inquiry.',
+        'privacy_link': 'Privacy policy',
+        'fallback': 'Your inquiry is ready. Nothing has been sent yet.',
+        'open_email': 'Open email app',
+        'copy': 'Copy inquiry',
+        'nojs': 'Your inquiry will be submitted on Formspree. You can also email Aaron directly.',
+        'footer_line': 'Ads that reach. Websites that capture inquiries. Follow-up that keeps things moving.',
+        'copyright': '© 2026 Keystone Growth. All rights reserved.',
+        'terms': 'Terms',
+        'legal_note': 'Policies in English',
+        'photo_alt': 'Aaron Brenes, founder of Keystone Growth'},
+ 'es': {'title': 'Keystone Growth | Publicidad, sitios web y automatización CRM',
+        'description': 'Trabajá directamente con Aaron Brenes en publicidad digital, sitios web y '
+                       'automatización CRM. Para negocios en Latinoamérica y Estados Unidos.',
+        'skip': 'Saltar al contenido',
+        'nav': ['Servicios', 'Tu aliado', 'Cómo trabajamos', 'Contacto'],
+        'menu': 'Menú',
+        'call': 'Agendá una llamada',
+        'hero_label': 'Marketing para negocios en Latinoamérica',
+        'hero': 'Que te encuentren.<br/>Que te contacten.<br/><em>Que no se enfríe.</em>',
+        'hero_p': 'Publicidad en Google y Meta, una web que facilite el contacto y seguimiento automático. '
+                  'Trabajá directamente con Aaron para aprovechar mejor cada consulta.',
+        'explore': 'Explorá los servicios',
+        'hero_note': 'Trabajá directamente con Aaron. En español o inglés.',
+        'system_label': 'Del primer clic a una nueva consulta',
+        'flow': [('Atraé a las personas correctas', 'Google y Meta Ads con una oferta clara.'),
+                 ('Dales un siguiente paso', 'Una página enfocada en generar consultas.'),
+                 ('Mantené la conversación', 'Contactos organizados y seguimiento automático.')],
+        'system_foot': 'Un enfoque conectado. Dirigido por Aaron.',
+        'facts': [('Más de 3 años', 'Gestionando campañas digitales'),
+                  ('Contacto directo', 'De la estrategia a la ejecución'),
+                  ('Español + English', 'Sin fronteras. En tu idioma.')],
+        'services_label': 'Lo que podemos construir juntos',
+        'services_title': 'Más oportunidades.<br/>Menos consultas perdidas.',
+        'services_p': 'No alcanza con que vean tu anuncio. Tu negocio necesita una oferta clara, una forma '
+                      'fácil de contactarte y un proceso para dar seguimiento.',
+        'services': [('Publicidad digital',
+                      'Llegá a personas que buscan lo que vendés.',
+                      'Campañas en Google y Meta con una oferta clara y mensajes para tu mercado. Revisamos '
+                      'las consultas y los resultados para decidir qué ajustar.',
+                      ['Google Ads', 'Meta Ads', 'Reportes de campañas'],
+                      'Hablemos de publicidad',
+                      'Publicidad digital'),
+                     ('Sitios web y landing pages',
+                      'Facilitá el primer contacto.',
+                      'Una web o landing page rápida en celular, con una oferta fácil de entender y un '
+                      'siguiente paso claro: escribir, pedir una cotización o reservar.',
+                      ['Sitios web', 'Landing pages', 'Captación de contactos'],
+                      'Hablemos de tu web',
+                      'Sitios web y landing pages'),
+                     ('CRM y automatización',
+                      'Ordená los contactos y el seguimiento.',
+                      'Conectá formularios, CRM y las herramientas que usa tu negocio. Automatizá '
+                      'confirmaciones y recordatorios, y definí quién atiende cada consulta para que no se '
+                      'pierda entre mensajes.',
+                      ['Pipelines de ventas', 'Seguimiento automático', 'Flujos de reservas'],
+                      'Hablemos de automatización',
+                      'CRM y automatización')],
+        'founder_label': 'La persona detrás de Keystone',
+        'founder_title': 'Tu negocio.<br/>Mi atención directa.',
+        'founder_p': ['Soy Aaron, fundador de Keystone Growth. Ayudo a negocios a conectar su publicidad, su '
+                      'sitio web y el seguimiento de consultas para darle una dirección más clara a su '
+                      'marketing.',
+                      'Tengo más de tres años de experiencia gestionando campañas. Hablás directamente '
+                      'conmigo sobre la estrategia, las prioridades y el progreso de tu proyecto.',
+                      'Desde Costa Rica, trabajo de forma remota con negocios en Latinoamérica y Estados '
+                      'Unidos. El mismo compromiso, en el idioma que prefirás.'],
+        'founder_caption': 'Fundador · Keystone Growth',
+        'founder_facts': [('Más de 3 años', 'De experiencia gestionando campañas'),
+                          ('Un contacto', 'Comunicación directa con Aaron')],
+        'founder_link': 'Conversemos sobre tu negocio',
+        'process_label': 'Así trabajamos juntos',
+        'process_title': 'Un inicio claro.<br/>Un siguiente paso concreto.',
+        'process': [('Entendemos tu negocio',
+                     'Conversamos sobre tu oferta, tus clientes, tu marketing actual y lo que querés '
+                     'mejorar. Definimos si podemos aportar valor.'),
+                    ('Definimos el alcance',
+                     'Recibís una propuesta clara: prioridades, entregables, plazos, tarifas y '
+                     'responsabilidades. Nos enfocamos en lo que tu negocio necesita.'),
+                    ('Lanzamos y mejoramos',
+                     'Ponemos el plan en marcha, revisamos el progreso y hacemos ajustes informados. Sabés '
+                     'qué está pasando y con quién hablar.')],
+        'market_label': 'Enfoque en Latinoamérica · Español e inglés',
+        'market_title': 'Adaptado a cómo te compran.',
+        'market_p': 'Campañas y páginas pensadas para tu país, tu oferta y tu forma de vender. Si atendés '
+                    'por WhatsApp, podemos conectar ese paso con tu web y CRM; las integraciones y sus '
+                    'costos se definen en la propuesta.',
+        'scope_title': 'Un alcance que encaje con vos.',
+        'scope_p': 'Los proyectos y la gestión mensual se cotizan según tus objetivos y la complejidad. La '
+                   'inversión publicitaria y las plataformas se pagan por separado.',
+        'scope_link': 'Conversemos sobre el alcance',
+        'faq_label': 'Antes de empezar',
+        'faq_title': 'Claro desde<br/>el principio.',
+        'faq_intro': 'Una relación directa empieza con expectativas claras.',
+        'faqs': [('¿Para qué negocios es Keystone?',
+                  'Para negocios con una oferta clara, capacidad de atender más clientes y alguien que '
+                  'responda las consultas. Primero entendemos tu proceso de ventas y definimos si el alcance '
+                  'tiene sentido.'),
+                 ('¿Tengo que contratar los tres servicios?',
+                  'No. Podemos trabajar publicidad, sitio web o landing page, o automatización CRM por '
+                  'separado. Si conectarlos resuelve un problema real, definimos un alcance conjunto.'),
+                 ('¿Voy a trabajar directamente con Aaron?',
+                  'Sí. Aaron dirige la estrategia, la comunicación y la revisión de calidad. La '
+                  'automatización y especialistas pueden apoyar la ejecución; Aaron sigue siendo tu contacto '
+                  'directo.'),
+                 ('¿Ustedes llaman o cierran mis ventas?',
+                  'La atención personal de contactos y el cierre de ventas no forman parte del alcance '
+                  'estándar. La automatización puede apoyar confirmaciones, recordatorios y seguimiento; tu '
+                  'equipo atiende las conversaciones y cierra las ventas, salvo acuerdo separado.'),
+                 ('¿Cuánto cuesta?',
+                  'Cotizamos según los entregables, los canales, las integraciones y el soporte que '
+                  'necesitás. Los honorarios se pagan por separado de la publicidad, el software y los '
+                  'mensajes.'),
+                 ('¿También podemos trabajar en inglés?',
+                  'Claro. Trabajamos en español e inglés. Elegí el idioma que prefirás y adaptamos la web, '
+                  'las campañas y el seguimiento a tu audiencia.')],
+        'contact_label': 'Encontremos el siguiente paso',
+        'contact_title': '¿Qué está frenando<br/>tus consultas?',
+        'contact_p': '¿Te escriben poco? ¿Preguntan y desaparecen? ¿Los contactos se quedan entre chats y '
+                     'correos? Contame dónde se traba el proceso.',
+        'email_label': '¿Preferís escribir?',
+        'form_title': 'Contame qué necesitás mejorar.',
+        'form_note': 'Contame en qué estás trabajando. Te respondo por correo.',
+        'labels': ['Tu nombre',
+                   'Negocio o sitio web',
+                   '¿Qué necesitás?',
+                   'Presupuesto mensual de publicidad',
+                   '¿Qué te gustaría mejorar?'],
+        'placeholders': ['Tu nombre',
+                         'Nombre del negocio o sitio web',
+                         'Contame un poco sobre tus objetivos.'],
+        'services_options': ['Publicidad digital',
+                             'Sitios web y landing pages',
+                             'CRM y automatización',
+                             'Un plan de marketing conectado',
+                             'Ayuda para elegir'],
+        'choose': 'Seleccioná una opción',
+        'budgets': ['Aún no invierto en publicidad',
+                    'Menos de US$300',
+                    'US$300–US$1.000',
+                    'US$1.000–US$3.000',
+                    'Más de US$3.000',
+                    'Por definir'],
+        'prepare': 'Enviar mi consulta',
+        'privacy': 'Tus datos se envían mediante Formspree para que Aaron pueda responder tu consulta.',
+        'privacy_link': 'Política de privacidad',
+        'fallback': 'Tu consulta está lista. Todavía no se ha enviado nada.',
+        'open_email': 'Abrir aplicación de correo',
+        'copy': 'Copiar consulta',
+        'nojs': 'Tu consulta se enviará mediante Formspree. También podés escribirle directamente a Aaron.',
+        'footer_line': 'Publicidad para encontrarte. Una web para contactarte. Seguimiento para avanzar.',
+        'copyright': '© 2026 Keystone Growth. Todos los derechos reservados.',
+        'terms': 'Términos',
+        'legal_note': 'Políticas en inglés',
+        'photo_alt': 'Aaron Brenes, fundador de Keystone Growth'}}
 def brand(): return f'<a class="brand" href="#top" aria-label="Keystone Growth">{MARK}<span class="brand-words">KEYSTONE<span>GROWTH</span></span></a>'
 def btn(text,href,cls='',external=False):return f'<a class="btn {cls}" href="{href}"'+(' target="_blank" rel="noopener noreferrer"' if external and href.startswith('https://') else '')+f'>{text}<span class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 19 19 5M5 5h14v14"/></svg></span></a>'
 # Verified Google Calendar appointment schedule: weekdays 08:00-17:00 America/Costa_Rica.
@@ -28,7 +307,7 @@ def build(lang,prefix):
  options='<option value="">'+t['choose']+'</option>'+''.join(f'<option>{x}</option>' for x in t['services_options'])
  budgets='<option value="">'+t['choose']+'</option>'+''.join(f'<option>{x}</option>' for x in t['budgets'])
  current=lambda l:' aria-current="page"' if l==lang else ''
- schema=json.dumps({'@context':'https://schema.org','@type':'ProfessionalService','name':'Keystone Growth','url':'https://keystonegrowth.org/','email':'aaron@keystonegrowth.org','description':t['description'],'founder':{'@type':'Person','name':'Aaron Brenes'},'availableLanguage':['English','Spanish']},ensure_ascii=False)
+ schema=json.dumps({'@context':'https://schema.org','@type':'ProfessionalService','name':'Keystone Growth','url':'https://keystonegrowth.org/','email':'aaronbrenes918@gmail.com','description':t['description'],'founder':{'@type':'Person','name':'Aaron Brenes'},'availableLanguage':['English','Spanish']},ensure_ascii=False)
  return f'''<!DOCTYPE html>
 <html lang="{lang}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#041C35"><title>{t['title']}</title><meta name="description" content="{t['description']}"><link rel="canonical" href="https://keystonegrowth.org/{lang}/"><link rel="alternate" hreflang="en" href="https://keystonegrowth.org/en/"><link rel="alternate" hreflang="es" href="https://keystonegrowth.org/es/"><link rel="alternate" hreflang="x-default" href="https://keystonegrowth.org/"><link rel="icon" href="{prefix}favicon.svg" type="image/svg+xml"><link rel="preload" href="{a}fonts/Montserrat-700.ttf" as="font" type="font/ttf" crossorigin><link rel="stylesheet" href="{a}site.css"><meta property="og:type" content="website"><meta property="og:title" content="{t['title']}"><meta property="og:description" content="{t['description']}"><meta property="og:url" content="https://keystonegrowth.org/{lang}/"><meta property="og:image" content="https://keystonegrowth.org/assets/social-card.png"><meta name="twitter:card" content="summary_large_image"><script type="application/ld+json">{schema}</script><script defer src="{a}site.js"></script></head>
 <body id="top"><a class="skip" href="#main">{t['skip']}</a><header><div class="wrap header-row">{brand()}<button class="menu-toggle" aria-controls="main-nav" aria-expanded="false" type="button">{t['menu']}</button><nav id="main-nav" class="nav" aria-label="{'Principal' if lang=='es' else 'Main'}">{nav}</nav><div class="language" aria-label="{'Idioma' if lang=='es' else 'Language'}"><a data-language lang="en" href="{prefix}en/"{current('en')}>EN</a><span aria-hidden="true">/</span><a data-language lang="es" href="{prefix}es/"{current('es')}>ES</a></div>{btn(t['call'],CAL,external=True)}</div></header>
@@ -38,8 +317,8 @@ def build(lang,prefix):
 <section id="process" class="section"><div class="wrap"><div class="process-intro"><div class="eyebrow">{t['process_label']}</div><h2>{t['process_title']}</h2></div><div class="process-grid">{process}</div></div></section>
 <section class="section markets"><div class="wrap"><div class="market-band"><div><div class="eyebrow">{t['market_label']}</div><h3>{t['market_title']}</h3><p>{t['market_p']}</p></div><div><h3>{t['scope_title']}</h3><p>{t['scope_p']}</p><a class="text-link" href="#contact">{t['scope_link']} {ar}</a></div></div></div></section>
 <section class="section"><div class="wrap faq-grid"><div class="faq-intro"><div class="eyebrow">{t['faq_label']}</div><h2>{t['faq_title']}</h2><p>{t['faq_intro']}</p></div><div class="faq">{faqs}</div></div></section>
-<section id="contact" class="section dark"><div class="wrap contact-grid"><div class="contact-copy"><div class="eyebrow">{t['contact_label']}</div><h2>{t['contact_title']}</h2><p>{t['contact_p']}</p>{btn(t['call'],CAL,external=True)}<p class="contact-email">{t['email_label']}<br/><a href="mailto:aaron@keystonegrowth.org">aaron@keystonegrowth.org</a></p></div><form id="inquiry-form" class="contact-form" action="https://formspree.io/f/xlgaobby" method="post"><h3>{t['form_title']}</h3><p class="form-note">{t['form_note']}</p><input type="hidden" name="_subject" value="Keystone Growth website inquiry"><div class="honeypot" aria-hidden="true"><label for="website-url">Leave this empty</label><input type="text" id="website-url" name="_gotcha" tabindex="-1" autocomplete="off"></div><div class="form-grid"><div class="field"><label for="name">{t['labels'][0]}</label><input id="name" name="name" required autocomplete="name" maxlength="100" placeholder="{t['placeholders'][0]}"></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" maxlength="200" placeholder="you@business.com"></div><div class="field full"><label for="business">{t['labels'][1]}</label><input id="business" name="business" required autocomplete="organization" maxlength="200" placeholder="{t['placeholders'][1]}"></div><div class="field"><label for="service">{t['labels'][2]}</label><select id="service" name="service" required>{options}</select></div><div class="field"><label for="budget">{t['labels'][3]}</label><select id="budget" name="budget">{budgets}</select></div><div class="field full"><label for="goal">{t['labels'][4]}</label><textarea id="goal" name="goal" required maxlength="1500" placeholder="{t['placeholders'][2]}"></textarea></div></div><button type="submit" class="btn">{t['prepare']} {ar}</button><p class="privacy-note">{t['privacy']} <a href="{prefix}privacy.html">{t['privacy_link']}</a>.</p><div id="email-fallback" class="email-fallback" hidden><p>{t['fallback']}</p><a class="text-link" id="open-email" href="mailto:aaron@keystonegrowth.org">{t['open_email']} {ar}</a><br/><button class="copy-button" id="copy-inquiry" type="button">{t['copy']}</button><textarea id="inquiry-text" aria-label="{'Texto de tu consulta' if lang=='es' else 'Your inquiry text'}" readonly hidden></textarea></div><p class="status" id="inquiry-status" role="status" aria-live="polite"></p><noscript><p class="privacy-note">{t['nojs']}</p></noscript></form></div></section></main>
-<footer><div class="wrap"><div class="footer-main">{brand()}<p>{t['footer_line']}</p><a class="text-link" href="mailto:aaron@keystonegrowth.org">aaron@keystonegrowth.org</a></div><div class="footer-bottom"><span>{t['copyright']}</span><div class="footer-links"><a href="{prefix}privacy.html">{t['privacy_link']}</a><a href="{prefix}terms.html">{t['terms']}</a>{('<span>'+t['legal_note']+'</span>') if lang=='es' else ''}</div></div></div></footer></body></html>'''
+<section id="contact" class="section dark"><div class="wrap contact-grid"><div class="contact-copy"><div class="eyebrow">{t['contact_label']}</div><h2>{t['contact_title']}</h2><p>{t['contact_p']}</p>{btn(t['call'],CAL,external=True)}<p class="contact-email">{t['email_label']}<br/><a href="mailto:aaronbrenes918@gmail.com">aaronbrenes918@gmail.com</a></p></div><form id="inquiry-form" class="contact-form" action="https://formspree.io/f/xlgaobby" method="post"><h3>{t['form_title']}</h3><p class="form-note">{t['form_note']}</p><input type="hidden" name="_subject" value="Keystone Growth website inquiry"><div class="honeypot" aria-hidden="true"><label for="website-url">Leave this empty</label><input type="text" id="website-url" name="_gotcha" tabindex="-1" autocomplete="off"></div><div class="form-grid"><div class="field"><label for="name">{t['labels'][0]}</label><input id="name" name="name" required autocomplete="name" maxlength="100" placeholder="{t['placeholders'][0]}"></div><div class="field"><label for="email">Email</label><input id="email" name="email" type="email" required autocomplete="email" maxlength="200" placeholder="you@business.com"></div><div class="field full"><label for="business">{t['labels'][1]}</label><input id="business" name="business" required autocomplete="organization" maxlength="200" placeholder="{t['placeholders'][1]}"></div><div class="field"><label for="service">{t['labels'][2]}</label><select id="service" name="service" required>{options}</select></div><div class="field"><label for="budget">{t['labels'][3]}</label><select id="budget" name="budget">{budgets}</select></div><div class="field full"><label for="goal">{t['labels'][4]}</label><textarea id="goal" name="goal" required maxlength="1500" placeholder="{t['placeholders'][2]}"></textarea></div></div><button type="submit" class="btn">{t['prepare']} {ar}</button><p class="privacy-note">{t['privacy']} <a href="{prefix}privacy.html">{t['privacy_link']}</a>.</p><div id="email-fallback" class="email-fallback" hidden><p>{t['fallback']}</p><a class="text-link" id="open-email" href="mailto:aaronbrenes918@gmail.com">{t['open_email']} {ar}</a><br/><button class="copy-button" id="copy-inquiry" type="button">{t['copy']}</button><textarea id="inquiry-text" aria-label="{'Texto de tu consulta' if lang=='es' else 'Your inquiry text'}" readonly hidden></textarea></div><p class="status" id="inquiry-status" role="status" aria-live="polite"></p><noscript><p class="privacy-note">{t['nojs']}</p></noscript></form></div></section></main>
+<footer><div class="wrap"><div class="footer-main">{brand()}<p>{t['footer_line']}</p><a class="text-link" href="mailto:aaronbrenes918@gmail.com">aaronbrenes918@gmail.com</a></div><div class="footer-bottom"><span>{t['copyright']}</span><div class="footer-links"><a href="{prefix}privacy.html">{t['privacy_link']}</a><a href="{prefix}terms.html">{t['terms']}</a>{('<span>'+t['legal_note']+'</span>') if lang=='es' else ''}</div></div></div></footer></body></html>'''
 for lang in ['en','es']:
  (ROOT/lang/'index.html').write_text(build(lang,'../'))
 (ROOT/'index.html').write_text(build('en',''))
