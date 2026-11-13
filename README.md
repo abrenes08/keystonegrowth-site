@@ -42,3 +42,11 @@ Booking uses the verified Google Calendar appointment schedule defined by CAL in
 - Pricing remains quote-based. The recommended US/LATAM fees have not been made public.
 
 The legacy draft HTML, campaign download pages and older assets are retained to avoid breaking prior campaign links.
+
+## Transfer recovery (2026-11-13 UTC)
+
+After the Infomaniak transfer, public DNS showed Infomaniak nameservers but no apex A/AAAA or MX records. Restore the GitHub Pages website records in the Infomaniak DNS zone before considering the transfer setup complete. The CNAME file remains keystonegrowth.org.
+
+GitHub Pages apex A records: 185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153. The www CNAME points to abrenes08.github.io. Preserve unrelated verification records. Use mail records supplied by the activated Infomaniak email product, rather than assuming a mailbox exists after the domain transfer. Gmail remains the website and Formspree destination until branded email delivery is verified.
+
+Browser icons now use a versioned SVG URL plus PNG, ICO and Apple touch formats. Legacy campaign pages use the current approved logo.
