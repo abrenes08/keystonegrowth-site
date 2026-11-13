@@ -51,3 +51,13 @@ GitHub Pages apex A records: 185.199.108.153, 185.199.109.153, 185.199.110.153, 
 
 Browser icons now use a versioned SVG URL plus PNG, ICO and Apple touch formats. Legacy campaign pages use the current approved logo.
 
+
+## Search discovery (2026-11-13)
+
+The site has six detailed service pages (three English, three Spanish), linked from the corresponding homepage service headings and from related-service navigation. Each page has its own title, description, canonical URL, matching language alternatives, visible scope/FAQ content and Organization/Person/WebSite/WebPage metadata. Service pages also describe the actual service and breadcrumb trail in JSON-LD. No reviews, locations, prices, client results or guarantees were invented.
+
+The sitemap lists eight canonical URLs. Old roofing draft/download and thank-you pages carry noindex,follow to keep legacy campaigns available without treating outdated offers as the current organic landing page. robots.txt permits crawling. No special AI ranking file or paid indexing service is required or implied. Search engines decide whether and when to crawl, index, rank or cite these pages.
+
+Outreach sample KG-OUTREACH-20261113-A was sent only from the restored business mailbox to Aaron’s Gmail. It appeared in Inbox and passed SPF, DKIM and DMARC. This is a single controlled delivery observation, not a reputation score, campaign response test or guarantee of prospect inbox placement. Infomaniak’s bulk-mail consent requirements still apply; no prospect campaign was launched.
+
+Google Search Console domain ownership for keystonegrowth.org was verified with a DNS TXT record under Aaron’s Google account on 2026-11-13. Keep the verification record in DNS. Sitemap submission and indexing requests are tracked in Search Console; neither guarantees indexing or rank.

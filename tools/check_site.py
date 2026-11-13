@@ -14,13 +14,13 @@ class Page(HTMLParser):
   if tag=='link' and a.get('rel')=='canonical':self.canon.append(a['href'])
   for k in ['href','src']:
    if k in a:self.links.append(a[k])
-for file in ['index.html','en/index.html','es/index.html']:
+for file in ['index.html']+[str(p.relative_to(ROOT)) for lang in ['en','es'] for p in (ROOT/lang).rglob('index.html')]:
  p=ROOT/file; parser=Page();parser.feed(p.read_text());assert parser.h1==1;assert len(parser.ids)==len(set(parser.ids));assert len(parser.canon)==1
  for v in parser.inputs:assert v in parser.labels,(file,v)
  for link in parser.links:
   u=urlsplit(link)
   if u.scheme or u.netloc:continue
-  target=(p.parent/unquote(u.path)).resolve() if u.path else p
+  target=((ROOT/unquote(u.path).lstrip('/')).resolve() if u.path.startswith('/') else (p.parent/unquote(u.path)).resolve()) if u.path else p
   if target.is_dir():target=target/'index.html'
   assert target.exists(),(file,link)
   if u.fragment:
@@ -30,3 +30,22 @@ for file in ['index.html','en/index.html','es/index.html']:
 for font in (ROOT/'assets/fonts').glob('*.ttf'):assert font.stat().st_size<200000
 assert (ROOT/'CNAME').read_text().strip()=='keystonegrowth.org'
 print('PASS existing custom domain preserved; local Montserrat assets present')
+
+# Validate the graph and localized discovery paths on every generated page.
+import xml.etree.ElementTree as ET
+ns={'s':'http://www.sitemaps.org/schemas/sitemap/0.9'}
+urls=[x.text for x in ET.parse(ROOT/'sitemap.xml').findall('s:url/s:loc',ns)]
+assert len(urls)==8 and len(set(urls))==8
+for url in urls:
+ file=ROOT/urlsplit(url).path.lstrip('/')/'index.html';raw=file.read_text()
+ schemas=re.findall(r'<script type="application/ld\+json">(.*?)</script>',raw,re.S)
+ assert len(schemas)==1
+ entities=json.loads(schemas[0])['@graph'];types={x['@type'] for x in entities}
+ assert {'Organization','Person','WebSite','WebPage'}<=types
+ if '/services/' in url or '/servicios/' in url:assert {'Service','BreadcrumbList'}<=types
+ for alt in re.findall(r'<link rel="alternate" hreflang="[^"]+" href="([^"]+)"',raw):
+  assert (ROOT/urlsplit(alt).path.lstrip('/')/'index.html').exists()
+ assert '<meta name="robots" content="index,follow,max-image-preview:large">' in raw
+for file in ['index 1st version (draft).html','swipe-file.html','thank-you.html']:
+ assert 'noindex,follow' in (ROOT/file).read_text()
+print('PASS 8 sitemap URLs, entity graphs, service breadcrumbs, reciprocal language destinations and legacy noindex')
